@@ -59,6 +59,5 @@ function removeBook(i) {
   updateData();
   displayBooks();
 }
-removeBook();
 
 window.onload = displayBooks();
