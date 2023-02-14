@@ -1,4 +1,6 @@
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-vars */
+
 // checking if local storage is empty than add an empty array
 if (localStorage.getItem('Added Books') == null) {
   localStorage.setItem('Added Books', JSON.stringify([]));
