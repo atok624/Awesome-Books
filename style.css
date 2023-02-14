@@ -1,0 +1,23 @@
+* {
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgba(235, 235, 235, 0.496);
+    margin-left: 10px;
+}
+
+button {
+    padding: 2px;
+    margin-top: 5px;
+}
+
+input {
+    margin: 5px 0 ;
+}
