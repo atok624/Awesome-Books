@@ -10,7 +10,7 @@ html {
 
 body {
   background-color: rgba(235, 235, 235, 0.496);
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 input {
-  width: 50%;
+  width: 100%;
 }
 
 .container {
@@ -31,7 +31,9 @@ h2 {
 }
 
 form {
-  text-align: center;
+  text-align: right;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .book {
@@ -61,8 +63,8 @@ hr {
 
 .addBtn {
   width: 60px;
+  place-self: end;
   text-align: center;
-  margin-left: 36.5%;
   padding: 2px;
   margin-top: 5px;
 }
