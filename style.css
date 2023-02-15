@@ -18,18 +18,12 @@ h1 {
   text-align: center;
 }
 
-button {
-  padding: 2px;
-  margin-top: 5px;
-}
-
 input {
   width: 50%;
 }
 
 .container {
   border: 2px black solid;
-  padding: 0 5px;
 }
 
 h2 {
@@ -40,9 +34,10 @@ form {
   text-align: center;
 }
 
-li {
+.book {
   display: flex;
   justify-content: space-between;
+  padding: 3px;
 }
 
 .title {
@@ -54,7 +49,7 @@ li {
   padding: 1px 4px 1px 4px;
 }
 
-ul:nth-child(even) {
+li:nth-child(odd) {
   background: #d3d3d3;
 }
 
@@ -67,18 +62,25 @@ hr {
 .addBtn {
   width: 60px;
   text-align: center;
-  margin-left: 180px;
+  margin-left: 36.5%;
+  padding: 2px;
+  margin-top: 5px;
 }
 
 #removebtn {
   padding: 1px 2px;
   background-color: #fff;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
-  margin-left: 10px;
+  margin: 2px 5px;
+  font-size: 0.9em;
 }
 
 #date {
   margin: 1% 1% 1% 0;
   text-align: center;
   font-weight: bolder;
+}
+
+.bookShelfe {
+  margin: 0;
 }
