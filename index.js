@@ -54,19 +54,17 @@ form.addEventListener('submit', (e) => {
 
 function Display(item) {
   const container = document.querySelector('.container');
-  const ul = document.createElement('ul');
-  ul.classList.add('bookShelfe');
+  const ul = document.querySelector('.bookShelfe');
   const li = document.createElement('li');
   li.classList.add('book');
   li.setAttribute('id', item.bookId);
-  li.innerHTML = `${item.title} by ${item.author}`;
+  li.innerHTML = `"${item.title}" by ${item.author}`;
   const rmbtn = document.createElement('button');
   rmbtn.innerHTML = 'Remove';
   rmbtn.setAttribute('id', 'removebtn');
   rmbtn.addEventListener('click', () => storeBook.removeBook(item.bookId));
   li.appendChild(rmbtn);
   ul.appendChild(li);
-  container.appendChild(ul);
 }
 
 // function createBooks(arr) {
