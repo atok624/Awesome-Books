@@ -5,12 +5,17 @@
 }
 
 html {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
   background-color: rgba(235, 235, 235, 0.496);
-  margin-left: 10px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
 }
 
 button {
@@ -19,5 +24,61 @@ button {
 }
 
 input {
-  margin: 5px 0;
+  width: 50%;
+}
+
+.container {
+  border: 2px black solid;
+  padding: 0 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.title,
+.author {
+  padding: 1px 4px 1px 4px;
+}
+
+ul:nth-child(even) {
+  background: #d3d3d3;
+}
+
+hr {
+  margin-top: 30px;
+  width: 100px;
+  border: 1px solid gray;
+}
+
+.addBtn {
+  width: 60px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+#removebtn {
+  padding: 1px 2px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
+  margin-left: 10px;
+}
+
+#date {
+  margin: 1% 1% 1% 0;
+  text-align: center;
+  font-weight: bolder;
 }
