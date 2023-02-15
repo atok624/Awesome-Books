@@ -8,17 +8,46 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>Awesome Books</h1>
+    <header>
+      <h2>Awesome Books</h2>
+      <nav>
+        <ul>
+          <a href="#List"><li class="list">List</li></a>
+          <a href="#add-new"><li class="second list">Add new</li></a>
+          <a href="#contact"><li class="list">Contact</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="List">
+      <h1>Awesome Books</h1>
     <div id="date"></div>
     <div class="container"><ul class="bookShelfe"></ul></div>
     <hr>
-    <h2>Add new book</h2>
-    <form id="form" class="remove-section">
-      <input type="text" class="title" name="title" placeholder="Title" required /><br>
-      <input type="text" class="author" name="author" placeholder="Author" required/><br>
-      <button class="addBtn" type="submit">Add</button>
-      </div>
-    </form>
+    </section>
+    <section class="add-new">
+      <h2>Add new book</h2>
+      <form id="form" class="remove-section">
+        <input type="text" class="title" name="title" placeholder="Title" required /><br>
+        <input type="text" class="author" name="author" placeholder="Author" required/><br>
+        <button class="addBtn" type="submit">Add</button>
+        </div>
+      </form>
+    </section>
+    <section class="contact">
+      <h2>Contact Information</h2>
+      <p>
+         Do you have any question or you just want to say hello!<br>
+         You can reach out to us
+      </p>
+      <ul>
+        <li>Our Email: adamnoah@gmail.com</li>
+        <li>Our Telephone Number: +223 66557788</li>
+        <li>Our Address: P.K.4</li>
+      </ul>
+    </section>
+    <footer>
+       <p> &copy Nicholas-Basim </p>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
