@@ -1,6 +1,7 @@
 * {
   list-style: none;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -14,6 +15,47 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  text-align: center;
+}
+
+/* Beginning of header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px 4%;
+  height: auto;
+  margin: 5px 0 20px 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+.list {
+  background-color: white;
+  font-size: medium;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+.second {
+  margin: 0 5px;
+  padding: 0 5px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+header h2 {
+  font-size: medium;
+}
+
+/* End of header */
+
 h1 {
   text-align: center;
 }
@@ -24,10 +66,6 @@ input {
 
 .container {
   border: 2px black solid;
-}
-
-h2 {
-  text-align: center;
 }
 
 form {
@@ -51,7 +89,7 @@ form {
   padding: 1px 4px 1px 4px;
 }
 
-li:nth-child(odd) {
+.book:nth-child(odd) {
   background: #d3d3d3;
 }
 
@@ -81,6 +119,7 @@ hr {
   margin: 1% 1% 1% 0;
   text-align: center;
   font-weight: bolder;
+  align-self: end;
 }
 
 .bookShelfe {
