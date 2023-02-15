@@ -5,19 +5,84 @@
 }
 
 html {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
   background-color: rgba(235, 235, 235, 0.496);
-  margin-left: 10px;
+  width: 40%;
+  margin: 0 auto;
 }
 
-button {
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+.container {
+  border: 2px black solid;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  text-align: right;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.title,
+.author {
+  padding: 1px 4px 1px 4px;
+}
+
+li:nth-child(odd) {
+  background: #d3d3d3;
+}
+
+hr {
+  margin-top: 30px;
+  width: 100px;
+  border: 1px solid gray;
+}
+
+.addBtn {
+  width: 60px;
+  place-self: end;
+  text-align: center;
   padding: 2px;
   margin-top: 5px;
 }
 
-input {
-  margin: 5px 0;
+#removebtn {
+  padding: 1px 2px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
+  margin: 2px 5px;
+  font-size: 0.9em;
+}
+
+#date {
+  margin: 1% 1% 1% 0;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.bookShelfe {
+  margin: 0;
 }

@@ -1,65 +1,82 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 
+class Book {
+  constructor(title, author) {
+    this.bookId = Math.random().toFixed(1);
+    this.title = title;
+    this.author = author;
+  }
+}
+
+class Library {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(item) {
+    this.books.push(item);
+    localStorage.setItem('Added Books', JSON.stringify(this.books));
+    Display(item);
+  }
+
+  removeBook(bookId) {
+    const rm = document.getElementById(bookId);
+    rm.remove();
+    this.books = this.books.filter((x) => x.bookId !== bookId);
+    localStorage.setItem('Added Books', JSON.stringify(this.books));
+  }
+}
+
+const storeBook = new Library();
 // checking if local storage is empty than add an empty array
-if (localStorage.getItem('Added Books') == null) {
-  localStorage.setItem('Added Books', JSON.stringify([]));
-}
+// if (localStorage.getItem('Added Books') == null) {
+//   localStorage.setItem('Added Books', JSON.stringify([]));
+// }
 
-// Store data into local storage
-const storeData = JSON.parse(localStorage.getItem('Added Books'));
+// // Store data into local storage
+// const storeData = JSON.parse(localStorage.getItem('Added Books'));
 
-function updateData() {
-  localStorage.setItem('Added Books', JSON.stringify(storeData));
-}
+// function updateData() {
+//   localStorage.setItem('Added Books', JSON.stringify(storeData));
+// }
 
-// Getting values from input fields
+// Getting values from input fields and adding them
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
   const title = document.querySelector('.title');
   const author = document.querySelector('.author');
   e.preventDefault();
-  addNewdata(title.value, author.value);
+  const newItem = new Book(title.value, author.value);
+  storeBook.addBook(newItem);
 });
 
-function createBooks(arr) {
-  let books = '';
-  for (let i = 0; i < arr.length; i += 1) {
-    books += `
-          <p>${arr[i].title}</p>
-          <p>${arr[i].author}</p>
-          <button onclick = "removeBook(${i})">Remove</button>
-          <hr />
-          `;
+function Display(item) {
+  const container = document.querySelector('.container');
+  const ul = document.querySelector('.bookShelfe');
+  const li = document.createElement('li');
+  li.classList.add('book');
+  li.setAttribute('id', item.bookId);
+  li.innerHTML = `"${item.title}" by ${item.author}`;
+  const rmbtn = document.createElement('button');
+  rmbtn.innerHTML = 'Remove';
+  rmbtn.setAttribute('id', 'removebtn');
+  rmbtn.addEventListener('click', () => storeBook.removeBook(item.bookId));
+  li.appendChild(rmbtn);
+  ul.appendChild(li);
+}
+
+window.onload = () => {
+  storeBook.books = JSON.parse(localStorage.getItem('Added Books' || '[]'));
+  if (storeBook.books === null) {
+    storeBook.books = [];
+    return;
   }
-  return books;
-}
-
-// Displaying data to the UI from local storage
-function displayBooks() {
-  const listOfBooks = document.querySelector('.container');
-  listOfBooks.innerHTML = `
-      <ul class="book-ul"> 
-      ${createBooks(storeData)}</ul>
-      `;
-}
-
-// Adding new data in the local storage
-function addNewdata(bookTitle, bookAuthor) {
-  const Book = {
-    title: bookTitle,
-    author: bookAuthor,
+  storeBook.books.forEach((item) => Display(item));
+  const live = () => {
+    const date = document.getElementById('date');
+    date.innerHTML = Date().slice(0, 25);
   };
-  storeData.push(Book);
-  updateData();
-  displayBooks();
-}
-
-// Removing data from local storage
-function removeBook(i) {
-  storeData.splice(i, 1);
-  updateData();
-  displayBooks();
-}
-
-window.onload = displayBooks();
+  setInterval(live, 1000);
+};
