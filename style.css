@@ -1,6 +1,7 @@
 * {
   list-style: none;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -10,9 +11,49 @@ html {
 
 body {
   background-color: rgba(235, 235, 235, 0.496);
-  width: 40%;
+  width: 90%;
   margin: 0 auto;
 }
+
+h2 {
+  text-align: center;
+}
+
+/* Beginning of header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 2% 5%;
+  height: auto;
+  margin: 5px 0 5px 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+.list {
+  font-size: large;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+.second {
+  margin: 0 5px;
+  padding: 0 5px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+header h2 {
+  font-size: large;
+}
+
+/* End of header */
 
 h1 {
   text-align: center;
@@ -24,16 +65,16 @@ input {
 
 .container {
   border: 2px black solid;
-}
-
-h2 {
-  text-align: center;
+  margin: 3% auto;
+  width: 70%;
 }
 
 form {
+  display: flex;
   text-align: right;
-  margin: 0 auto;
-  width: 70%;
+  margin: 20px auto 5% auto;
+  width: 30%;
+  flex-direction: column;
 }
 
 .book {
@@ -48,10 +89,10 @@ form {
 
 .title,
 .author {
-  padding: 1px 4px 1px 4px;
+  padding: 4px;
 }
 
-li:nth-child(odd) {
+.book:nth-child(odd) {
   background: #d3d3d3;
 }
 
@@ -79,10 +120,47 @@ hr {
 
 #date {
   margin: 1% 1% 1% 0;
-  text-align: center;
+  text-align: end;
   font-weight: bolder;
+  font-size: x-small;
 }
 
 .bookShelfe {
   margin: 0;
+}
+
+footer {
+  border: 1px solid black;
+  padding: 7px 20px;
+}
+
+.add-new {
+  display: none;
+}
+
+.contact {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.contact h2 {
+  font-size: xx-large;
+}
+
+.contact p {
+  font-size: large;
+  line-height: 1.7;
+}
+
+.contact ul {
+  font-size: large;
+  line-height: 1.7;
+}
+
+.contactinfo {
+  list-style: disc;
 }
