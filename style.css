@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: rgba(235, 235, 235, 0.496);
-  width: 40%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -25,9 +25,9 @@ header {
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
-  padding: 5px 4%;
+  padding: 2% 5%;
   height: auto;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 5px 0;
 }
 
 nav ul {
@@ -35,8 +35,7 @@ nav ul {
 }
 
 .list {
-  background-color: white;
-  font-size: medium;
+  font-size: large;
 }
 
 nav ul a {
@@ -51,7 +50,7 @@ nav ul a {
 }
 
 header h2 {
-  font-size: medium;
+  font-size: large;
 }
 
 /* End of header */
@@ -66,12 +65,16 @@ input {
 
 .container {
   border: 2px black solid;
+  margin: 3% auto;
+  width: 70%;
 }
 
 form {
+  display: flex;
   text-align: right;
-  margin: 0 auto;
-  width: 70%;
+  margin: 20px auto 5% auto;
+  width: 30%;
+  flex-direction: column;
 }
 
 .book {
@@ -86,7 +89,7 @@ form {
 
 .title,
 .author {
-  padding: 1px 4px 1px 4px;
+  padding: 4px;
 }
 
 .book:nth-child(odd) {
@@ -117,11 +120,51 @@ hr {
 
 #date {
   margin: 1% 1% 1% 0;
-  text-align: center;
+  text-align: end;
   font-weight: bolder;
-  align-self: end;
+  font-size: x-small;
 }
 
 .bookShelfe {
   margin: 0;
+}
+
+footer {
+  border: 1px solid black;
+  padding: 7px 20px;
+}
+
+.List {
+  /* height: 80vh; */
+}
+
+.add-new {
+  display: none;
+}
+
+.contact {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.contact h2 {
+  font-size: xx-large;
+}
+
+.contact p {
+  font-size: large;
+  line-height: 1.7;
+}
+
+.contact ul {
+  font-size: large;
+  line-height: 1.7;
+}
+
+.contactinfo {
+  list-style: disc;
 }
