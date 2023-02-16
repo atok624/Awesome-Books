@@ -30,17 +30,6 @@ class Library {
 }
 
 const storeBook = new Library();
-// checking if local storage is empty than add an empty array
-// if (localStorage.getItem('Added Books') == null) {
-//   localStorage.setItem('Added Books', JSON.stringify([]));
-// }
-
-// // Store data into local storage
-// const storeData = JSON.parse(localStorage.getItem('Added Books'));
-
-// function updateData() {
-//   localStorage.setItem('Added Books', JSON.stringify(storeData));
-// }
 
 // Getting values from input fields and adding them
 const form = document.querySelector('form');
